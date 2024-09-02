@@ -7,6 +7,8 @@ import {
   PrimaryGeneratedColumn,
 } from 'typeorm';
 
+const dbPath = join('db', `${__dirname}.sqlite`);
+
 @Entity('content')
 class Content {
   @PrimaryGeneratedColumn()
@@ -27,8 +29,6 @@ class Comment {
   @ManyToOne(() => Content)
   content: Content;
 }
-
-const dbPath = join('db', 'relation.sqlite');
 
 describe('Test', () => {
   let dataSoure: DataSource;

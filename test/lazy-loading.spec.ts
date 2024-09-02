@@ -5,13 +5,11 @@ import {
   DataSource,
   Entity,
   JoinColumn,
-  JoinTable,
-  ManyToMany,
   OneToOne,
   PrimaryGeneratedColumn,
 } from 'typeorm';
 
-const dbPath = join('db', 'typeorm-case-study.sqlite');
+const dbPath = join('db', `${__dirname}.sqlite`);
 
 @Entity('user')
 class User {

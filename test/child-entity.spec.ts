@@ -8,7 +8,7 @@ import {
   TableInheritance,
 } from 'typeorm';
 
-const dbPath = join('db', 'typeorm-case-study-extends.sqlite');
+const dbPath = join('db', `${__dirname}.sqlite`);
 
 @Entity('content')
 @TableInheritance({ column: { type: 'varchar', name: 'type' } })
